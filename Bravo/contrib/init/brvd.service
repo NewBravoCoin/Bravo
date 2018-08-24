@@ -1,0 +1,26 @@
+[Unit]
+Description=BRV's distributed currency daemon
+After=network.target
+
+[Service]
+User=brv
+Group=brv
+
+Type=forking
+PIDFile=/var/lib/brvd/brvd.pid
+
+ExecStart=/usr/bin/brvd -daemon -pid=/var/lib/brvd/brvd.pid \
+          -conf=/etc/brv/brv.conf -datadir=/var/lib/brvd
+
+ExecStop=-/usr/bin/brv-cli -conf=/etc/brv/brv.conf \
+         -datadir=/var/lib/brvd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

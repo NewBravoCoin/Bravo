@@ -1,0 +1,26 @@
+# /etc/conf.d/brvd: config file for /etc/init.d/brvd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/brv/brv.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/brvd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/brvd.pid"
+
+# Where to write brvd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/brvd"
+
+# User and group to own brvd process
+#BITCOIND_USER="brv"
+#BITCOIND_GROUP="brv"
+
+# Path to brvd executable
+#BITCOIND_BIN="/usr/bin/brvd"
+
+# Nice value to run brvd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

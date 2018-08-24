@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BRV
+Comment=BRV P2P Cryptocurrency
+Comment[fr]=BRV, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BRV, eşten eşe kriptografik sanal para birimi
+Exec=brv-qt %u
+Terminal=false
+Type=Application
+Icon=brv128
+MimeType=x-scheme-handler/brv;
+Categories=Office;Finance;
